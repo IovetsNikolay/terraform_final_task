@@ -13,3 +13,8 @@ echo "--------GET_TERRAFORM----------"
 wget https://releases.hashicorp.com/terraform/0.13.5/terraform_0.13.5_linux_amd64.zip
 unzip terraform_0.13.5_linux_amd64.zip
 sudo mv terraform /usr/bin/
+echo "--------GET_DOCKER_ENGINE----------"
+sudo yum update -y
+sudo yum install docker -y
+sudo sudo chkconfig docker on
+sudo service docker start
