@@ -18,3 +18,8 @@ sudo yum update -y
 sudo yum install docker -y
 sudo sudo chkconfig docker on
 sudo service docker start
+echo "--------GET_GIT----------"
+sudo yum install git -y
+echo "--------GET_ANSIBLE----------"
+sudo amazon-linux-extras install ansible2 -y
+echo "--------FINISH_INSTALL----------"
