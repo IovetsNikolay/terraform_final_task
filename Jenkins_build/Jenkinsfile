@@ -11,27 +11,16 @@ pipeline {
         sh 'ls -a'
       }
     }
-    stage('Chenge Dir') {
+    stage('Terraform Init') {
       steps {
-        sh 'cd jenkins_terraform'
+        sh 'terraform init'
       }
     }
-    stage('LS') {
+    stage('Terraform Apply') {
       steps {
-        sh 'ls -a'
+        sh 'terraform apply --auto-approve'
       }
     }
-
-//    stage('Terraform Init') {
-//      steps {
-//        sh 'terraform init'
-//      }
-//    }
-//    stage('Terraform Apply') {
-//      steps {
-//        sh 'terraform apply --auto-approve'
-//      }
-//    }
 
 
   }
