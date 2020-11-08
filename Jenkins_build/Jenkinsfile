@@ -16,6 +16,11 @@ pipeline {
         sh 'cd jenkins_terraform'
       }
     }
+    stage('LS') {
+      steps {
+        sh 'ls -a'
+      }
+    }
 
 //    stage('Terraform Init') {
 //      steps {
